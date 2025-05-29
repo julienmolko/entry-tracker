@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход</title>
+</head>
+<body>
+  <h2>Загрузка...</h2>
+  <script>
+    const token = '8146163597:AAE3KZvgFl-s_ZzWzhBmDSdsPaL4WQOHAFc';
+    const chatId = '133120689';
+    const now = new Date().toLocaleString();
+    const userAgent = navigator.userAgent;
+    const message = `👀 Посещение сайта\\n🕒 Время: ${now}\\n📱 Устройство: ${userAgent}`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    fetch(url).catch(e => console.error("Ошибка:", e));
+  </script>
+</body>
+</html>
